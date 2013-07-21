@@ -1,0 +1,125 @@
+
+/* wikicalendar */
+
+/**
+ * CSS for the WikiCalendar Plugin
+ * @author Michael Klier <chi@chimeric.de>
+ * @author additions by Malte Dik <dev@enteig.net>
+ */
+
+div.dokuwiki div.plugin_wikicalendar {
+  width: 100%;
+  border: 1px solid __border__;
+  padding: 1em 1em 1em 1.5em;
+  margin: 1em;
+  float: left;
+}
+
+div.dokuwiki table.plugin_wikicalendar{ 
+  width: 100%;
+}
+
+div.dokuwiki table.plugin_wikicalendar tr:hover { 
+  background: none; 
+}
+
+div.dokuwiki table.plugin_wikicalendar th.month {
+  text-align: center;
+  height: 2em;
+  vertical-align: middle;
+  color:  __black__;
+}
+
+div.dokuwiki table.plugin_wikicalendar td {
+  border: 1px solid __border__;
+  width: 14%;
+  padding: 0;
+  margin: 0;
+}
+
+div.dokuwiki table.plugin_wikicalendar_go2 {
+  margin: 0 0 0.5em !important;
+}
+
+div.dokuwiki table.plugin_wikicalendar_go2 td {
+  border: none !important;
+}
+ 
+div.dokuwiki table.plugin_wikicalendar td.weekday {
+  text-align: center;
+}
+
+div.dokuwiki table.plugin_wikicalendar td.today {
+  border: 2px solid #000000;
+  font-weight: bold;
+}
+
+div.dokuwiki table.plugin_wikicalendar td.blank {
+  border: none;
+}
+ 
+div.dokuwiki table.plugin_wikicalendar td.day:hover,
+div.dokuwiki table.plugin_wikicalendar td.today:hover {
+  background: #EEEEEE;
+}
+ 
+div.dokuwiki table.plugin_wikicalendar div.noevent,
+div.dokuwiki table.plugin_wikicalendar div.isevent {
+  width: 86%;
+  height: 3em;
+  margin: 0.2em;
+  padding: 0.4em;
+  float: left;
+}
+
+div.dokuwiki table.plugin_wikicalendar td div.isevent {
+  background: #cfc;
+}
+ 
+div.dokuwiki table.plugin_wikicalendar div.day_num {
+  float: right;
+}
+
+div.dokuwiki table.plugin_wikicalendar div.day_num a:hover {
+  text-decoration: none;
+}
+
+div.dokuwiki table.plugin_wikicalendar td.day div.abstract,
+div.dokuwiki table.plugin_wikicalendar td.today div.abstract {
+  display: none;
+}
+
+
+div.dokuwiki table.plugin_wikicalendar td.day:hover div.abstract,
+div.dokuwiki table.plugin_wikicalendar td.today:hover div.abstract {
+  display: block;
+  float: left;
+  position: absolute !important;
+  padding: 0.5em;
+/*   left: -20%; */
+/*   top: -15em; */
+  border: 1px solid __border__;
+  background: #ff9;
+  width: 16em;
+}
+
+div.dokuwiki table.plugin_wikicalendar input.btn_next_month,
+div.dokuwiki table.plugin_wikicalendar input.btn_prev_month {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+div.dokuwiki table.plugin_wikicalendar_go2 label {
+  font-weight: bold;
+}
+
+div.dokuwiki a.plugin_wikicalendar_btn {
+  float: left;
+}
+
+div.dokuwiki a.plugin_wikicalendar_btn:hover {
+  text-decoration: none;
+}
+

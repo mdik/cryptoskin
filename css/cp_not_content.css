@@ -1,0 +1,284 @@
+
+/* "aside" is more or less all about the menu */
+
+#dokuwiki__aside {
+    width: 100%;
+    float: none;
+    position: relative;
+    display: block;
+    border-bottom: 1px dotted #d900ff;
+}
+[dir=rtl] #dokuwiki__aside {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+#dokuwiki__aside > .pad {
+    margin: 0;
+    padding: 0;
+}
+[dir=rtl] #dokuwiki__aside > .pad {
+    margin: 0;
+}
+
+/* spaghetti a la navigare. bon appetit. */
+
+#dokuwiki__aside > .pad > ul{
+    border-top: 1px dotted #d900ff;
+/*     border-bottom: 1px dotted #d900ff; */
+    line-height: 1.0em;
+}
+
+#dokuwiki__aside > .pad > ul > li.level1 > ul {
+    list-style: none;
+    margin: 0em;
+    padding: 0em;
+    display: none;
+}
+
+#dokuwiki__aside > .pad > ul > li.level1 > ul > li.level2{
+    list-style: none;
+    margin: 0em;
+    padding: 0em;
+}
+
+#dokuwiki__aside > .pad > ul > li.level1:hover > ul {
+    list-style: none;
+    display: block;
+    position: absolute;
+    float: left;
+    border-left: 1px dotted #d900ff;
+    border-bottom: 1px dotted #d900ff;
+    background-color: #FFFFFF;
+}
+
+#dokuwiki__aside > .pad > ul > li.level1:hover > ul > li.level2 > div.li > a.wikilink1:hover {
+    color: #ff0098;
+    background-color: #FFFFFF;
+}
+
+
+#dokuwiki__aside > .pad > ul > li.level1{
+    float: left;
+    border-right: 1px dotted #d900ff;
+    list-style: none;
+    margin: 0;
+}
+
+#dokuwiki__aside > .pad > ul li.level1 div {
+    display: inline;
+    background-color: #FFFFFF;
+}
+
+#dokuwiki__aside > .pad > ul li.level1 a,
+#dokuwiki__aside > .pad > ul li.level1 a:visited {
+    color: #9800df;
+    text-decoration: none;
+    text-transform: none;
+    display: block;
+    padding: 0.6em 1.2em;
+}
+#dokuwiki__aside > .pad > ul li.level1 a:hover {
+    background-color: #FFFFFF;
+    color: #ff0098;
+}
+
+
+/* the topmost buttons ("edit page" til "login") */
+
+#cp_top_tools {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 1.2em;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    z-index: 50;
+    
+    color: #4444cc;
+}
+
+#cp_top_tools a {
+    color: #4444cc;
+}
+
+#cp_top_tools a:hover {
+    color: #ff009;
+}
+
+#dokuwiki__usertools,
+#dokuwiki__pagetools {
+    display: inline;
+}
+
+#dokuwiki__usertools {
+    position: absolute;
+    top: 0;
+    right: 2em;
+/*     float: right; */
+}
+
+#dokuwiki__pagetools {
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+/*     float: left; */
+}
+
+#dokuwiki__pagetools a.edit{
+    color: #44aa22;
+}
+
+
+
+#cp_top_tools ul.cp_more_actions {
+    display: none;
+}
+
+#cp_top_tools ul>li:hover ul.cp_more_actions {
+    list-style: circle;
+    display: block;
+    position: absolute;
+    right: 0;
+    float: left;
+    padding: 0.6em;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+#cp_top_tools ul>li:hover ul.cp_more_actions li {
+    list-style: circle;
+    display: block;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+
+/* the things below the topmost tools: the title, searchbox and site tools */
+
+#dokuwiki__header{
+    margin-bottom: 0.6em;
+}
+
+#dokuwiki__header .tools {
+    margin-bottom: 0;
+}
+
+#dokuwiki__header .headings {
+    margin-bottom: 0;
+}
+
+#dokuwiki__header .headings a img{
+    height: 2em;
+}
+
+#dokuwiki__header .headings h1 {
+/*     display: inline; */
+    margin-left: 0;
+    font-size: 1.5em;
+    border: none;
+    padding: 0;
+}
+#dokuwiki__header .headings h1 a {
+    display: inline;
+    text-decoration: none;
+    color: #d900ff;
+    background-color: inherit;
+}
+#dokuwiki__header .headings p.claim {
+    color: #888;
+    font-style: italic;
+    font-size: 0.8em;
+    margin-bottom: 0;
+    margin-top: 0.4em;
+}
+
+
+/*____________ site tools ____________*/
+
+#dokuwiki__sitetools {
+    text-align: right;
+    font-size: 0.8em;
+}
+[dir=rtl] #dokuwiki__sitetools {
+    text-align: left;
+}
+
+#dokuwiki__sitetools a {
+    color: #4444cc;
+}
+#dokuwiki__sitetools a:hover {
+    color: #ff0098;
+}
+
+/* nice looking searchbar, taken from official dokuwiki template */
+
+#dokuwiki__sitetools form.search {
+    display: block;
+    font-size: 0.875em;
+    position: relative;
+}
+#IE7 #dokuwiki__sitetools form.search {
+    min-height: 1px;
+    z-index: 21;
+}
+#dokuwiki__sitetools form.search input.edit {
+    width: 18em;
+    padding: .35em 22px .35em .1em;
+}
+[dir=rtl] #dokuwiki__sitetools form.search input.edit {
+    padding: .35em .1em .35em 22px;
+}
+#dokuwiki__sitetools form.search input.button {
+    background: transparent url(images/search.png) no-repeat 0 0;
+    border-width: 0;
+    width: 19px;
+    height: 14px;
+    text-indent: -99999px;
+    margin-left: -20px;
+    box-shadow: none;
+    padding: 0;
+}
+[dir=rtl] #dokuwiki__sitetools form.search input.button {
+    background-position: 5px 0;
+    margin-left: 0;
+    margin-right: -20px;
+    position: relative;
+}
+
+#dokuwiki__sitetools ul {
+    margin-top: 0.5em;
+}
+#dokuwiki__sitetools li {
+}
+
+
+/* the section-by-section edit button */
+
+.secedit input.button {
+    background-image: none;
+    background: none;
+    color: #cccccc;
+    border: none;
+}
+
+.secedit input.button:hover {
+    color: #ff0098;
+}
+
+
+
+/* footer */
+
+#dokuwiki__footer {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#dokuwiki__footer .doc {
+    margin: 0.2em auto;
+    float: none;
+    
+}
+

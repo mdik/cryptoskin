@@ -1,0 +1,132 @@
+
+/* this css is most about font, colors and giggles */
+
+html,
+body {
+    background-color: #FFFFFF;
+    color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: normal 100%/1.2 "Droid Sans", "DejaVu Sans", sans-serif;
+}
+
+#dokuwiki__content p {
+    font-family: "Droid Sans", "DejaVu Sans", sans-serif;
+    font-size: 12pt;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+#dokuwiki__content a {
+    color: #4444cc;
+}
+
+#dokuwiki__content a:hover {
+    color: #ff0098;
+}
+
+
+/* Structure */
+
+#dokuwiki__site {
+    margin: 0 auto;
+    max-width: 48em;
+    padding-top: 1.2em;
+/*     border-left: 1px solid #00FF00; */
+/*     border-right: 1px solid #00FF00; */
+}
+
+
+.hasSidebar #dokuwiki__content {
+    float: none;
+    margin: 2em auto;
+    width: 100%;
+/*     border: 1px solid #FF0000; */
+}
+[dir=rtl] .hasSidebar #dokuwiki__content {
+    float: left;
+    margin: 0 auto;
+}
+.hasSidebar #dokuwiki__content > .pad {
+    margin: 0;
+}
+[dir=rtl] .hasSidebar #dokuwiki__content > .pad {
+    margin: 0;
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Droid Serif", "DejaVu Serif", serif;
+    font-weight: bold;
+    color: #d900ff;
+    background-color: inherit;
+    padding: 0;
+    line-height: 1.2;
+    margin-left: 0;
+    clear: left; /* ideally 'both', but problems with toc */
+}
+
+
+h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.666em;
+    padding-left: 0.6em;
+    border-left: 2px solid #d900ff;
+}
+h2 {
+    font-size: 1.125em;
+    margin: 0 0 0.888em;
+}
+h3 {
+    font-size: 1em;
+    margin: 0 0 1.0em;
+}
+h4 {
+    font-size: .875em;
+    margin: 0 0 1.1428em;
+}
+h5 {
+    font-size: .75em;
+    margin: 0 0 1.333em;
+}
+h6 {
+    font-size: .6em;
+    margin: 0 0 1.688em;
+}
+
+/* some headings in the media manager should not look like headings */
+#mediamanager__page h2,
+#mediamanager__page h3 {
+    font-family: "Droid Sans", "DejaVu Sans", sans-serif;
+    color: __text__;
+}
+
+/* TOC */
+
+#dw__toc {
+    background-color: #ffffff;
+    border: 1px solid #ccccff;
+    font-size: 11pt;
+}
+/*
+#dw__toc li.level1 {
+    font-size: 10pt;
+}
+*/
+#dw__toc li.level2 {
+    font-size: 0.92em;
+}
+
+#dw__toc li.level3 {
+    font-size: 0.92em;
+}
